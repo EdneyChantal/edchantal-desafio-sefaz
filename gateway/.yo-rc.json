@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.edchantal.appbanco",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "gateway",
+    "baseName": "appbanco",
+    "packageName": "com.edchantal.appbanco",
+    "packageFolder": "com/edchantal/appbanco",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Njk2YTAwM2E0YjhlYTI0ZWFkMTQwMWMxNTgyYmI5NDQ3MzkyODNmNmI4YWY5YWU4MmI4ZmNmMDY4NDUyOGM0ZDE2OTBjNjg1ZjU2MjI2OGRmNDM2Mjc3NmI3NmJkNTY4N2QwYWJjNjFjZjIyMzY0NjY2MGJhZjU2ZjNiMWZiOTY=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1599764104756,
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": ["pt-br", "en"],
+    "blueprints": []
+  }
+}
