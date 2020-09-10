@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.edchantalsefaz.apibank"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "apibank",
+    "packageName": "com.edchantalsefaz.apibank",
+    "packageFolder": "com/edchantalsefaz/apibank",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2ZhZWNkMWYwYzMxYmQyNzcwMmNmOWRkZTFkZDkwYzdkYjYxMTViNjQzMzFkNzZhYmNjYTQ1ZDQ5YzhkYTU3MjA2YjZiNTBhYWZlMGRlZGNlZTg3NzYwYjA1OTBjYzM1ZjZmODUwY2U2ZWE4YmYzOTcxNjM1MTRlM2E0MGJlMWY=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1599770625511,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
