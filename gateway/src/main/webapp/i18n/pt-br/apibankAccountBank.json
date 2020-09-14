@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "apibankAccountBank": {
+      "home": {
+        "title": "Conta Bancária",
+        "createLabel": "Criar novo Conta Bancária",
+        "createOrEditLabel": "Criar ou editar Conta Bancária",
+        "notFound": "Nenhum Conta Bancária encontrado"
+      },
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Conta Bancária {{ id }}?"
+      },
+      "detail": {
+        "title": "Conta Bancária"
+      },
+      "saldo": "Saldo",
+      "numeroConta": "Numero Conta",
+      "person": "Cliente"
+    }
+  },
+  "apibankApp": {
+    "apibankAccountBank": {
+      "created": "Um novo Conta Bancária foi criado com o identificador {{ param }}",
+      "updated": "Um Conta Bancária foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Conta Bancária foi excluído com o identificador {{ param }}"
+    }
+  }
+}

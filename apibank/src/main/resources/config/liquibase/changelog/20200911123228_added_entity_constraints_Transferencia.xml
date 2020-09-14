@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Transferencia.
+    -->
+    <changeSet id="20200911123228-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="account_saque_id"
+                                 baseTableName="transferencia"
+                                 constraintName="fk_transferencia_account_saque_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="account_bank"/>
+
+        <addForeignKeyConstraint baseColumnNames="account_deposito_id"
+                                 baseTableName="transferencia"
+                                 constraintName="fk_transferencia_account_deposito_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="account_bank"/>
+
+    </changeSet>
+</databaseChangeLog>

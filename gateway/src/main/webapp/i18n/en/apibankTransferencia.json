@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "apibankTransferencia": {
+      "home": {
+        "title": "Transferencias",
+        "createLabel": "Create a new Transferencia",
+        "createOrEditLabel": "Create or edit a Transferencia",
+        "notFound": "No Transferencias found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Transferencia {{ id }}?"
+      },
+      "detail": {
+        "title": "Transferencia"
+      },
+      "dataTransferencia": "Data Transferencia",
+      "valor": "Valor",
+      "accountSaque": "Account Saque",
+      "accountDeposito": "Account Deposito"
+    }
+  },
+  "apibankApp": {
+    "apibankTransferencia": {
+      "created": "A new Transferencia is created with identifier {{ param }}",
+      "updated": "A Transferencia is updated with identifier {{ param }}",
+      "deleted": "A Transferencia is deleted with identifier {{ param }}"
+    }
+  }
+}

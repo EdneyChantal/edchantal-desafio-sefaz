@@ -1,7 +1,8 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.edchantalsefaz.apibank"
+      "packageName": "com.edchantalsefaz.apibank",
+      "nativeLanguage": "pt-br"
     },
     "jhipsterVersion": "6.10.1",
     "applicationType": "microservice",
@@ -21,16 +22,18 @@
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "M2ZhZWNkMWYwYzMxYmQyNzcwMmNmOWRkZTFkZDkwYzdkYjYxMTViNjQzMzFkNzZhYmNjYTQ1ZDQ5YzhkYTU3MjA2YjZiNTBhYWZlMGRlZGNlZTg3NzYwYjA1OTBjYzM1ZjZmODUwY2U2ZWE4YmYzOTcxNjM1MTRlM2E0MGJlMWY=",
+    "jwtSecretKey": "OGU4NmJhMDY5ODAyOTAyOGU2Y2VmOTQwYzUwNjk3M2M0MmVlMjZjMjU5NjE0MWFhYjdlYTY1YWVhNWJmZWExZDgxYzc4ZDc1YTAyYWU4ZTRmNTA0ZDkwNzJjNWY0Y2MyNTY4MmQzNDg1YzQxMGI2MzlkY2NlNGEwOWNhZGFiYTg=",
     "embeddableLaunchScript": false,
-    "creationTimestamp": 1599770625511,
+    "creationTimestamp": 1599862309330,
     "testFrameworks": [],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
-    "enableTranslation": false,
+    "enableTranslation": true,
     "clientPackageManager": "npm",
+    "nativeLanguage": "pt-br",
+    "languages": ["pt-br", "en"],
     "blueprints": [],
     "skipClient": true,
     "skipUserManagement": true

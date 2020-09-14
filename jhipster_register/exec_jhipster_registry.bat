@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk-12.0.1\bin\java.exe" -jar jhipster-registry-6.3.0.jar --spring.security.user.password=admin --spring.cloud.config.server.composite.0.type=native --spring.cloud.config.server.composite.0.search-locations=file:./central-config

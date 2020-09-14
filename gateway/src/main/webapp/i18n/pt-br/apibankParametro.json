@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "apibankParametro": {
+      "home": {
+        "title": "Parametro da Aplicação ",
+        "createLabel": "Criar novo Parametro",
+        "createOrEditLabel": "Criar ou editar Parametro",
+        "notFound": "Nenhum Parametro encontrado"
+      },
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Parametro {{ id }}?"
+      },
+      "detail": {
+        "title": "Parametro"
+      },
+      "vlrMinAbreConta": "Vlr Min Abre Conta",
+      "vlrMaxTransfer": "Vlr Max Transfer"
+    }
+  },
+  "apibankApp": {
+    "apibankParametro": {
+      "created": "Um novo Parametro foi criado com o identificador {{ param }}",
+      "updated": "Um Parametro foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Parametro foi excluído com o identificador {{ param }}"
+    }
+  }
+}

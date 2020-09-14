@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "apibankSaque": {
+      "home": {
+        "title": "Saques",
+        "createLabel": "Create a new Saque",
+        "createOrEditLabel": "Create or edit a Saque",
+        "notFound": "No Saques found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Saque {{ id }}?"
+      },
+      "detail": {
+        "title": "Saque"
+      },
+      "dataSaque": "Data Saque",
+      "valor": "Valor",
+      "account": "Account"
+    }
+  },
+  "apibankApp": {
+    "apibankSaque": {
+      "created": "A new Saque is created with identifier {{ param }}",
+      "updated": "A Saque is updated with identifier {{ param }}",
+      "deleted": "A Saque is deleted with identifier {{ param }}"
+    }
+  }
+}

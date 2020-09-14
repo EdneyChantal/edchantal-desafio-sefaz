@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="deposito">
+            <h2><span jhiTranslate="gatewayApp.apibankDeposito.detail.title">Deposito</span> {{ deposito.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.apibankDeposito.dataDeposito">Data Deposito</span></dt>
+                <dd>
+                    <span>{{ deposito.dataDeposito }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.apibankDeposito.valor">Valor</span></dt>
+                <dd>
+                    <span>{{ deposito.valor }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.apibankDeposito.account">Account</span></dt>
+                <dd>
+                    <div *ngIf="deposito.accountId">
+                        <a [routerLink]="['/account-bank', deposito.accountId, 'view']">{{ deposito.accountNumeroConta }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/deposito', deposito.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "apibankSolicabertConta": {
+      "home": {
+        "title": "Solicabert Contas",
+        "createLabel": "Create a new Solicabert Conta",
+        "createOrEditLabel": "Create or edit a Solicabert Conta",
+        "notFound": "No Solicabert Contas found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Solicabert Conta {{ id }}?"
+      },
+      "detail": {
+        "title": "Solicabert Conta"
+      },
+      "nome": "Nome",
+      "cpf": "Cpf",
+      "saldoinicial": "Saldoinicial",
+      "status": "Status"
+    }
+  },
+  "apibankApp": {
+    "apibankSolicabertConta": {
+      "created": "A new Solicabert Conta is created with identifier {{ param }}",
+      "updated": "A Solicabert Conta is updated with identifier {{ param }}",
+      "deleted": "A Solicabert Conta is deleted with identifier {{ param }}"
+    }
+  }
+}

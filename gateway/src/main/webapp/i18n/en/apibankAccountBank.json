@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "apibankAccountBank": {
+      "home": {
+        "title": "Account Banks",
+        "createLabel": "Create a new Account Bank",
+        "createOrEditLabel": "Create or edit a Account Bank",
+        "notFound": "No Account Banks found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Account Bank {{ id }}?"
+      },
+      "detail": {
+        "title": "Account Bank"
+      },
+      "saldo": "Saldo",
+      "numeroConta": "Numero Conta",
+      "person": "Person"
+    }
+  },
+  "apibankApp": {
+    "apibankAccountBank": {
+      "created": "A new Account Bank is created with identifier {{ param }}",
+      "updated": "A Account Bank is updated with identifier {{ param }}",
+      "deleted": "A Account Bank is deleted with identifier {{ param }}"
+    }
+  }
+}

@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     io.github.jhipster: INFO
-    com.edchantal.appbanco: INFO
+    com.edchantalsefaz.gateway: INFO
 
 eureka:
   instance:
@@ -38,6 +38,24 @@ spring:
       enabled: false
     livereload:
       enabled: false
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/gateway?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: root
+    password:
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+  jpa:
+    show-sql: false
+  # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
+  liquibase:
+    contexts: prod
   mail:
     host: localhost
     port: 25
@@ -57,7 +75,7 @@ spring:
 
 # ===================================================================
 # To enable TLS in production, generate a certificate using:
-# keytool -genkey -alias appbanco -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias gateway -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
 # You can also use Let's Encrypt:
 # https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
@@ -112,7 +130,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: Njk2YTAwM2E0YjhlYTI0ZWFkMTQwMWMxNTgyYmI5NDQ3MzkyODNmNmI4YWY5YWU4MmI4ZmNmMDY4NDUyOGM0ZDE2OTBjNjg1ZjU2MjI2OGRmNDM2Mjc3NmI3NmJkNTY4N2QwYWJjNjFjZjIyMzY0NjY2MGJhZjU2ZjNiMWZiOTY=
+        base64-secret: YzkwMmVjZTAwN2E4Y2E0ODEwMjE5YzllNzIxYWFjMWMyZTM1Y2VmMWE2MGUwYWUyZTE0MzFlYWY0M2E0MzZmNmZmOGRhNDJhM2UzMWY3NTQ5OWRiNDE1ZTEwNDYzMmM3MzQwZGUwZmE3YTY0YTI1NDIzMGZhZWFlMDhmZjExMjg=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
@@ -129,6 +147,9 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
+  audit-events:
+    retention-period: 30 # Number of days before audit events are deleted.
+
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class

@@ -1,0 +1,69 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.apibankSaque.home.title">Saques</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-saque" [routerLink]="['/saque/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gatewayApp.apibankSaque.home.createLabel">
+            Create a new Saque
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="saques?.length === 0">
+        <span jhiTranslate="gatewayApp.apibankSaque.home.notFound">No saques found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="saques && saques.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.apibankSaque.dataSaque">Data Saque</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.apibankSaque.valor">Valor</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.apibankSaque.account">Account</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let saque of saques ;trackBy: trackId">
+                    <td><a [routerLink]="['/saque', saque.id, 'view']">{{ saque.id }}</a></td>
+                    <td>{{ saque.dataSaque | date:'mediumDate' }}</td>
+                    <td>{{ saque.valor }}</td>
+                    <td>
+                        <div *ngIf="saque.accountId">
+                            <a [routerLink]="['/account-bank', saque.accountId , 'view']" >{{ saque.accountNumeroConta }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/saque', saque.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <!--<button type="submit"
+                                    [routerLink]="['/saque', saque.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(saque)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>-->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

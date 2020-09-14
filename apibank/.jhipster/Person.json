@@ -1,0 +1,30 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "apibank",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "cpf",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "unique", "min", "max"],
+      "fieldValidateRulesMin": "1",
+      "fieldValidateRulesMax": "99999999999"
+    }
+  ],
+  "changelogDate": "20200911111248",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "person",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no",
+  "microserviceName": "apibank"
+}

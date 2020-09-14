@@ -1,0 +1,42 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "apibank",
+  "relationships": [
+    {
+      "relationshipName": "accountSaque",
+      "otherEntityName": "accountBank",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "numeroConta"
+    },
+    {
+      "relationshipName": "accountDeposito",
+      "otherEntityName": "accountBank",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "numeroConta"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "dataTransferencia",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "changelogDate": "20200911123228",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "transferencia",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no",
+  "microserviceName": "apibank"
+}

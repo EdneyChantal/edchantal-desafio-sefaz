@@ -1,0 +1,35 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "apibank",
+  "relationships": [
+    {
+      "relationshipName": "person",
+      "otherEntityName": "person",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "nome"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "saldo",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "numeroConta",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "unique"]
+    }
+  ],
+  "changelogDate": "20200910212142",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "account_bank",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no",
+  "microserviceName": "apibank"
+}

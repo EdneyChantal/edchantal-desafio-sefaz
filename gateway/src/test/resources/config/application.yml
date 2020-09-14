@@ -17,34 +17,60 @@ eureka:
   client:
     enabled: false
   instance:
-    appname: appbanco
-    instanceId: appbanco:${spring.application.instance-id:${random.value}}
+    appname: gateway
+    instanceId: gateway:${spring.application.instance-id:${random.value}}
 
 spring:
+  profiles:
+  # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
+  #active: testcontainers
   application:
-    name: appbanco
+    name: gateway
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:gateway;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    name:
+    username:
+    password:
+    hikari:
+      auto-commit: false
   jackson:
     serialization:
       write-durations-as-timestamps: false
+  jpa:
+    database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.connection.provider_disables_autocommit: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+      hibernate.hbm2ddl.auto: validate
+      hibernate.jdbc.time_zone: UTC
+  liquibase:
+    contexts: test
   mail:
     host: localhost
   main:
     allow-bean-definition-overriding: true
   messages:
     basename: i18n/messages
-  security:
-    user:
-      name: test
-      password: test
   task:
     execution:
-      thread-name-prefix: appbanco-task-
+      thread-name-prefix: gateway-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: appbanco-scheduling-
+      thread-name-prefix: gateway-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -62,7 +88,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'appbancoApp'
+    name: 'gatewayApp'
   logging:
     # To test json console appender
     use-json-format: false
@@ -71,11 +97,14 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
+  mail:
+    from: test@localhost
+    base-url: http://127.0.0.1:8080
   security:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: Njk2YTAwM2E0YjhlYTI0ZWFkMTQwMWMxNTgyYmI5NDQ3MzkyODNmNmI4YWY5YWU4MmI4ZmNmMDY4NDUyOGM0ZDE2OTBjNjg1ZjU2MjI2OGRmNDM2Mjc3NmI3NmJkNTY4N2QwYWJjNjFjZjIyMzY0NjY2MGJhZjU2ZjNiMWZiOTY=
+        base64-secret: YzkwMmVjZTAwN2E4Y2E0ODEwMjE5YzllNzIxYWFjMWMyZTM1Y2VmMWE2MGUwYWUyZTE0MzFlYWY0M2E0MzZmNmZmOGRhNDJhM2UzMWY3NTQ5OWRiNDE1ZTEwNDYzMmM3MzQwZGUwZmE3YTY0YTI1NDIzMGZhZWFlMDhmZjExMjg=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:

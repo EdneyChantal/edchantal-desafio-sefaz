@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-account-bank-heading" jhiTranslate="gatewayApp.apibankAccountBank.home.createOrEditLabel">Create or edit a Account Bank</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.apibankAccountBank.saldo" for="field_saldo">Saldo</label>
+                    <input type="number" class="form-control" name="saldo" id="field_saldo"
+                           formControlName="saldo"/>
+                    <div *ngIf="editForm.get('saldo')!.invalid && (editForm.get('saldo')!.dirty || editForm.get('saldo')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('saldo')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('saldo')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.apibankAccountBank.numeroConta" for="field_numeroConta">Numero Conta</label>
+                    <input type="number" class="form-control" name="numeroConta" id="field_numeroConta"
+                           formControlName="numeroConta"/>
+                    <div *ngIf="editForm.get('numeroConta')!.invalid && (editForm.get('numeroConta')!.dirty || editForm.get('numeroConta')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('numeroConta')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('numeroConta')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.apibankAccountBank.person" for="field_person">Person</label>
+                    <select class="form-control" id="field_person" name="person" formControlName="personId">
+                        <option *ngIf="!editForm.get('personId')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="personOption.id" *ngFor="let personOption of people; trackBy: trackById">{{ personOption.nome }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('personId')!.invalid && (editForm.get('personId')!.dirty || editForm.get('personId')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('personId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

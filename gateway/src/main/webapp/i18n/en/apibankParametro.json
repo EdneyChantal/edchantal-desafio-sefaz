@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "apibankParametro": {
+      "home": {
+        "title": "Parametros",
+        "createLabel": "Create a new Parametro",
+        "createOrEditLabel": "Create or edit a Parametro",
+        "notFound": "No Parametros found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Parametro {{ id }}?"
+      },
+      "detail": {
+        "title": "Parametro"
+      },
+      "vlrMinAbreConta": "Vlr Min Abre Conta",
+      "vlrMaxTransfer": "Vlr Max Transfer"
+    }
+  },
+  "apibankApp": {
+    "apibankParametro": {
+      "created": "A new Parametro is created with identifier {{ param }}",
+      "updated": "A Parametro is updated with identifier {{ param }}",
+      "deleted": "A Parametro is deleted with identifier {{ param }}"
+    }
+  }
+}

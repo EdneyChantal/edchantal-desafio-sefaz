@@ -1,7 +1,7 @@
 {
-  "name": "appbanco",
+  "name": "gateway",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for appbanco",
+  "description": "Description for gateway",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

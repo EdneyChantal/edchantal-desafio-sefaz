@@ -1,0 +1,27 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "apibank",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "vlrMinAbreConta",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vlrMaxTransfer",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "changelogDate": "20200911162911",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "parametro",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no",
+  "microserviceName": "apibank"
+}

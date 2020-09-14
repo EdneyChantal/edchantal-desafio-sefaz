@@ -75,7 +75,7 @@ import { fontAwesomeIcons } from './icons/font-awesome-icons';
     },
   ],
 })
-export class AppbancoCoreModule {
+export class GatewayCoreModule {
   constructor(iconLibrary: FaIconLibrary, dpConfig: NgbDatepickerConfig, languageService: JhiLanguageService) {
     registerLocaleData(locale);
     iconLibrary.addIcons(...fontAwesomeIcons);

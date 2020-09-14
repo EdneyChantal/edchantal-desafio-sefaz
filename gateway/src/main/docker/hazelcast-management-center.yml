@@ -1,6 +1,6 @@
 version: '2'
 services:
-  appbanco-hazelcast-management-center:
+  gateway-hazelcast-management-center:
     image: hazelcast/management-center:3.12.9
     ports:
       - 8180:8080

@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "apibankSolicabertConta": {
+      "home": {
+        "title": "Abertura de Contas",
+        "createLabel": "Criar nova Soliciação de Abertura de Conta",
+        "createOrEditLabel": "Criar ou editar Abertura Conta",
+        "notFound": "Nenhuma Solicitação encontrado"
+      },
+      "delete": {
+        "question": "Tem certeza de que deseja excluir a Solicitação {{ id }}?"
+      },
+      "detail": {
+        "title": "Solicitações"
+      },
+      "nome": "Nome",
+      "cpf": "Cpf",
+      "saldoinicial": "Saldoinicial",
+      "status": "Status"
+    }
+  },
+  "apibankApp": {
+    "apibankSolicabertConta": {
+      "created": "Uma nova Solicitação Conta foi criado com o identificador {{ param }}",
+      "updated": "Uma Solicitação de  Conta foi atualizado com o identificador {{ param }}",
+      "deleted": "Uma Nova Solicitação de  Conta foi excluído com o identificador {{ param }}"
+    }
+  }
+}

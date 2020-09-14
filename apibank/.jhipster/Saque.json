@@ -1,0 +1,35 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "apibank",
+  "relationships": [
+    {
+      "relationshipName": "account",
+      "otherEntityName": "accountBank",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "numeroConta"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "dataSaque",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "changelogDate": "20200911120317",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "saque",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no",
+  "microserviceName": "apibank"
+}

@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-parametro-heading" jhiTranslate="gatewayApp.apibankParametro.home.createOrEditLabel">Create or edit a Parametro</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.apibankParametro.vlrMinAbreConta" for="field_vlrMinAbreConta">Vlr Min Abre Conta</label>
+                    <input type="number" class="form-control" name="vlrMinAbreConta" id="field_vlrMinAbreConta"
+                           formControlName="vlrMinAbreConta"/>
+                    <div *ngIf="editForm.get('vlrMinAbreConta')!.invalid && (editForm.get('vlrMinAbreConta')!.dirty || editForm.get('vlrMinAbreConta')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('vlrMinAbreConta')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('vlrMinAbreConta')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.apibankParametro.vlrMaxTransfer" for="field_vlrMaxTransfer">Vlr Max Transfer</label>
+                    <input type="number" class="form-control" name="vlrMaxTransfer" id="field_vlrMaxTransfer"
+                           formControlName="vlrMaxTransfer"/>
+                    <div *ngIf="editForm.get('vlrMaxTransfer')!.invalid && (editForm.get('vlrMaxTransfer')!.dirty || editForm.get('vlrMaxTransfer')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('vlrMaxTransfer')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('vlrMaxTransfer')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

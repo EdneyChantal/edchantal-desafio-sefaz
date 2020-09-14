@@ -14,7 +14,18 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200910212142_added_entity_AccountBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911115353_added_entity_Deposito.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911162911_added_entity_Parametro.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911111248_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911120317_added_entity_Saque.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911113108_added_entity_SolicabertConta.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911123228_added_entity_Transferencia.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200910212142_added_entity_constraints_AccountBank.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911115353_added_entity_constraints_Deposito.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911120317_added_entity_constraints_Saque.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200911123228_added_entity_constraints_Transferencia.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>
